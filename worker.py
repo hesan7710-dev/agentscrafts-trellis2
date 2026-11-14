@@ -74,7 +74,7 @@ def handler(job):
         pipeline = load_pipeline()
         mesh = pipeline.run(image)[0]
         # The official example uses this simplification step before O-Voxel export.
-        mesh.simplify(int(data.get("decimation_target", DECIMATION_TARGET)))
+        mesh.simplify(16777216)  # Match the upstream nvdiffrast face-count limit; final GLB decimation is handled below.
         import o_voxel
         glb = o_voxel.postprocess.to_glb(
             vertices=mesh.vertices,
