@@ -10,8 +10,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     git git-lfs wget curl build-essential cmake ninja-build sudo \
-    libgl1 libglib2.0-0 libxrender1 libxext6 libsm6 libjpeg-dev \
-
+    libgl1 libglib2.0-0 libxrender1 libxext6 libsm6 libjpeg-dev
 
 RUN wget -q https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O /tmp/miniforge.sh \
     && bash /tmp/miniforge.sh -b -p /opt/conda \
