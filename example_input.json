@@ -1,0 +1,7 @@
+{
+  "input": {
+    "image_base64": "<BASE64_ENCODED_PNG_OR_JPEG>",
+    "decimation_target": 1000000,
+    "texture_size": 2048
+  }
+}
